@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Pc
+  Date: 15/03/2023
+  Time: 12:04
+-->
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:h="jakarta.faces.html">
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+    <ui:define name="header">
+        <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="js/valida.js"></script>
+        <h1 class="display-4 fw-bolder">Contacto</h1>
+    </ui:define>
+
+    <ui:define name="contenido">
+
+        <h1>Prueba de validación de DNI</h1>
+
+        <h2>Dinos tu DNI</h2>
+            <input name="dni"/>
+            <input type="button" id="btDNI" value="Comprobar"/>
+            <p id="mensaje"></p>
+        <br/>
+    </ui:define>
+</ui:composition>
+</html>

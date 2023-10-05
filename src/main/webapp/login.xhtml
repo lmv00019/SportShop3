@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Pc
+  Date: 15/03/2023
+  Time: 12:04
+-->
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:c="jakarta.tags.core"
+
+      xmlns:h="jakarta.faces.html">
+
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+    <ui:define name="header">
+
+        <h1 class="display-4 fw-bolder">Iniciar sesion</h1>
+    </ui:define>
+
+    <ui:define name="contenido">
+
+
+        <div class="formulario">
+            <h1>Identificacion de usuario</h1>
+            <c:if test="#{param.error!=null}">
+                <p class="alert alert-danger">Error de autenticación</p>
+            </c:if>
+            <form action="j_security_check" method="POST">
+                <div class="username">
+                    <input type ="text" name="j_username"/>
+                    <label>Nombre de Usuario</label>
+                </div>
+                <div class="username">
+                    <input type="password" name="j_password"/>
+                    <label>Contraseña</label>
+                </div>
+                <div class="recordar">¿He olvidado mi contraseña?</div>
+                <input type="submit" value="Iniciar"/>
+                <div class="registrarse">
+                    Quiero hacer el <a href="registro.xhtml">registro</a>
+                </div>
+            </form>
+        </div>
+
+
+    </ui:define>
+</ui:composition>
+</html>

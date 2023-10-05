@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Lorena
+  Date: 15/03/2023
+  Time: 13:09
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:h="jakarta.faces.html">
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+    <ui:define name="header">
+        <h1 class="display-4 fw-bolder">Usuarios</h1>
+    </ui:define>
+
+    <ui:define name="contenido">
+        <h2> Usuarios de SportShop: </h2>
+            <ul>
+                <ui:repeat var="l" value="#{ctrlUsuario.usuarios}">
+                    <div>
+                        <div><b>Id del usuario: </b> #{l.id}</div>
+                        <div><b>DNI del usuario: </b> #{l.dni}</div>
+                        <div><b>Nombre del usuario: </b>  #{l.nombre}</div>
+                        <div><b>Correo electronico del usuario: </b>  #{l.email}</div>
+                    </div>
+                    <br></br>
+                </ui:repeat>
+            </ul>
+
+            <ul>
+                <strong>
+                    <a href="altaUsuario.xhtml"><button>Alta usuario</button></a>
+                    <a href="bajaUsuario.xhtml"><button>Baja usuario</button></a>
+                    <a href="../modificaUsuario.xhtml"><button>Modifica usuario</button></a>
+                </strong>
+            </ul>
+    </ui:define>
+</ui:composition>
+</html>

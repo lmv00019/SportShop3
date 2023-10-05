@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Lorena
+  Date: 17/03/2023
+  Time: 12:00
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:h="jakarta.faces.html">
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+    <ui:define name="header">
+        <h1 class="display-4 fw-bolder">Selección de talla</h1>
+    </ui:define>
+
+    <ui:define name="contenido">
+
+
+<br></br>
+        <body>
+        <h1>Selección</h1>
+        <img src="producto.jpg" alt="Producto"/>
+        <form id="product-form">
+            <label for="size">Talla:</label>
+            <select id="size" name="size">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+            </select>
+            <input type="button" value="Añadir a la cesta" onclick="addToCart()"/>
+        </form>
+<br></br>
+        <div id="cart">
+            <h2>Cesta de compra</h2>
+            <ul id="cart-items">
+                <!-- los elementos añadidos a la cesta aparecerán aquí -->
+            </ul>
+        </div>
+        </body>
+        <br></br>
+
+    </ui:define>
+</ui:composition>
+</html>
+
+
+        <!-- function addToCart() {
+  // Obtener la talla seleccionada
+  var size = document.getElementById("size").value;
+
+  // Crear un nuevo elemento de lista para la cesta
+  var cartItem = document.createElement("li");
+  cartItem.innerHTML = "Talla " + size;
+
+  // Agregar el elemento a la lista de la cesta
+  var cart = document.getElementById("cart-items");
+  cart.appendChild(cartItem);
+}-->
+
+

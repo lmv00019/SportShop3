@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Pc
+  Date: 15/03/2023
+  Time: 12:47
+-->
+<!DOCTYPE html
+        >
+
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:h="jakarta.faces.html">
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+<ui:define name="header">
+    <h1 class="display-4 fw-bolder">Sobre nosotros</h1>
+</ui:define>
+    <ui:define name="contenido">
+        <header>
+            <section class="textos-header">
+                <h1>Hola compañero, aquí podrás encontrar información sobre nuestra tienda</h1>
+            </section>
+
+        </header>
+
+        <div>
+
+            <br/>
+            <strong>SportShop </strong> es una empresa expresamente decicada al deporte y más en concreto a la venta de prendas deportivas para todo tipo de deportes y aventuras.
+            <br/>
+            <br/>
+            <section>
+                <h1>¿Dónde nos encontramos?</h1>
+                <strong>Nos encontramos en la calle xxxxxx, avenida de xxxxxx . Madrid, España</strong>
+
+            </section>
+            <br/>
+            <br></br>
+
+                <div style="text-align: center;"><h:graphicImage library="imagenes" name="map.png"/></div>
+
+        </div>
+        <br></br>
+        <br></br>
+    </ui:define>
+</ui:composition>
+</html>

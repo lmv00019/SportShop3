@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Lorena
+  Date: 29/03/2023
+  Time: 17:06
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:ui="jakarta.faces.facelets"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="jakarta.faces.passthrough">
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+<ui:define name="header">
+    <h1 class="display-4 fw-bolder">Modificar un usuario</h1>
+</ui:define>
+
+<ui:define name="contenido">
+    <br></br>
+    <h:form method="POST" class="formulario" action="alta">
+        <div align="center">
+
+            <div class="valores" style="margin-top: 10px" >
+                <h:inputText id="Nombre" value="#{ctrlUsuario.usuario.nombre}" p:placeholder="Nombre"/>
+            </div>
+
+            <div class="valores" style="margin-top: 10px" >
+                <h:inputText id="DNI" value="#{ctrlUsuario.usuario.dni}" p:placeholder="DNI"/>
+            </div>
+
+            <div class="valores" style="margin-top: 10px" >
+                <h:commandButton action="#{ctrlUsuario.modifica()}" value="Modificar usuario" outcome="listadoUsuarios" />
+            </div>
+
+        </div>
+    </h:form>
+
+</ui:define>
+</ui:composition>
+</html>

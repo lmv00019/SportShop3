@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Lorena
+  Date: 15/03/2023
+  Time: 12:31
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+
+<h:head>
+    <title>SportShop</title>
+    <link rel="shortcut icon" href="imagenes/iconopagina.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+</h:head>
+
+<f:view>
+    <h:body>
+        <div class="formulario">
+            <h1>Inicio de Sesion</h1>
+            <form method="post" action="">
+                <div class="username">
+                    <input required ="text" />
+                    <label>Nombre de usuario</label>
+                </div>
+                <div class="username">
+                    <input required="password"/>
+                    <label>Contraseña</label>
+                </div>
+                <div class="recordar">¿He olvidado mi contraseña?</div>
+                <input type="submit" value="Iniciar"/>
+                <div class="registrarse">
+                    Quiero hacer el <a href="#">registro</a>
+                </div>
+            </form>
+        </div>
+
+    </h:body>
+
+</f:view>
+</html>
